@@ -1,1 +1,4 @@
-Recipes.
+The scraper.py is the python file that scrapes off the data for the recipes from another website, and stores it in a JSON file.
+The JSON file contents were then transferred to a MySQL database.
+The scraper.py program works in conjunction with text files, that contain *all* the links of the relevant web pages.
+The text files (eg. paneer.txt) were created by scraping off the URL from the relevant web pages using a python program (eg.paneer.py).
