@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>FEEDBACK FORM</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  </head>
+  <body>
+    <h1>{{msg}}</h1>
+    {% if form %}
+    <h1>Please enter what you think about this recipe!</h1>
+    <form method="post"> <!--take this response and show it -->
+      {{form.as_p}}
+      {% csrf_token %}
+      <button type="submit">Submit</button>
+  </form>
+
+
+  <!-- <center>
+  <table>
+
+    <tr>
+      {% for x in form %}
+      <th>NAME:</th>
+      <td>{{x.name}}</td>
+    </tr>
+    <tr>
+      <th>EMAIL:</th>
+      <td>{{x.email}}</td>
+    </tr>
+    <tr>
+      <th>FEEDBACK:</th>
+      <td>{{x.text}}</td>
+    </tr>
+      {% endfor %}
+  </table>
+
+
+  </center> -->
+  {% endif %}
+
+
+  </body>
+</html>
