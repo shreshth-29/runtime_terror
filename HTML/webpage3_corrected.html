@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Runtime Terror </title>
+    <meta name="description" content="A recipe is a story that ends with a good meal. Explore everyday cooking inspirations, kitchen hacks all lots more!!">
+    <meta  charset="utf-8" />
+    <meta  name="recipe" content="What's Cooking?, follow" />
+    <link rel="icon" href="https://cdn.icon-icons.com/icons2/1368/PNG/128/-meal_89750.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+         body {
+             background-image: url("https://png.pngtree.com/thumb_back/fw800/back_our/20190620/ourmid/pngtree-nutrition-gourmet-poster-background-material-image_155524.jpg");
+
+             background-blend-mode: lighten;
+             background-repeat: no-repeat;
+             background-size: cover;
+            }
+    * {box-sizing: border-box;}
+
+    .header {
+          overflow: hidden;
+          background-color: rgb(235, 189, 106);
+           padding: 20px 10px;
+        }
+    .header a {
+        float: left;
+        color: black;
+        text-align: center;
+        padding: 12px;
+         font-size: 18px;
+         line-height: 25px;
+
+      }
+
+      .header a.logo {
+        font-size: 25px;
+        font-weight: bold;
+      }
+
+      .header a:hover {
+         background-color: #ddd;
+         color: black;
+      }
+
+      .header a.active {
+          background-color: dodgerblue;
+          color: white;
+      }
+
+      .header-right {
+          float: left;
+      }
+
+      @media screen and (max-width: 500px) {
+         .header a {
+            float: right;
+            display: block;
+            text-align: left;
+           }
+
+         .header-left {
+             float: none;
+          }
+
+        p, h1,h2,h3,h4,h5,h6 {
+            text-align: center
+        }
+
+      }
+
+
+    </style>
+
+  </head>
+  <body>
+    <div class="header">
+        <div class="header-right">
+            <a class="active" href="#home">Home</a>
+            <a href="#Breakfast">Breakfast</a>
+            <a href="#Lunch">Lunch</a>
+            <a href="#Rice">Rice</a>
+            <a href="#Paneer">Paneer</a>
+            <a href="#Snacks">Snacks</a>
+            <a href="#Sabzi">Sabzi</a>
+            <a href="#Sweets">Sweets</a>
+        </div>
+    </div>
+    <h1><!-- name --></h1>
+    <center>
+      <img src="" height="300px" width="500px">
+      <br>
+      <br>
+      <br>
+      <!--Text related to that dish--><!-- Table of contents-->
+      <center>
+        <h1><u>RECIPE</u></h1>
+        {% if final %}
+      <table border="5">
+        <tr>
+          {% for y in final %}
+          <th>Name: </th>
+          <td>{{y.name}}</td>
+        </tr>
+        <tr>
+
+          <th>Course: </th>
+          <td>{{y.course}}</td>
+        </tr>
+        <tr>
+          <th>Cuisine: </th>
+          <td>{{y.cuisine}}</td>
+        </tr>
+        <tr>
+          <th>Number of servings: </th>
+          <td>{{y.servings}}</td>
+        </tr>
+        <tr>
+          <th>Calories: </th>
+          <td>{{y.calories}}</td>
+        </tr>
+        <tr>
+          <th>Time taken: </th>
+          <td>{{y.total_time}}</td>
+        </tr>
+        <tr>
+          <th>Difficulty level: </th>
+          <td><!-- name of dish --></td>
+        </tr>
+        <tr>
+          <th>Ingredients: </th>
+          <td><!-- ingredients --></td>
+        </tr>
+        <tr>
+          <th>Instructions:</th>
+          <td><!-- instructions --></td>
+        </tr>
+
+        {% endfor %}
+      </table></center>
+      {% endif %}
+      <h2> <b>Your suggestions are very valuable to us...</h2><br><br><br>
+
+      <form action=""> <!--take this response and show it -->
+        <label for="user">Your name: </label>
+        <input type="text" id="user"><br><br>
+        <label for="email">Email id: </label>
+        <input type="email" id="email"><br><br>
+        <label for="Suggestions">Suggestions: </label>
+        <input type="text" id="Suggestions" height=50 width=50><br><br>
+        <button type="submit">Submit</button>
+    </form></b>
+
+    </center>
